@@ -21,16 +21,16 @@ $(function() {
         }
     });
 
-    $('#img_html').hover(function() {
-        MotionUI.animateIn('#img_html', 'scale-in-down');
+    $('#img_html').hover(function () {
+        MotionUI.animateIn('#img_html', 'scale-in-up');
     });
 
     $('#img_css').hover(function() {
         MotionUI.animateIn('#img_css', 'scale-in-down');
     });
 
-    $('#img_js').hover(function() {
-        MotionUI.animateIn('#img_js', 'spin-in');
+    $('#img_js').hover(function () {
+        MotionUI.animateIn('#img_js', 'spin-in-ccw');
     });
 
     $('#img_react').hover(function() {
