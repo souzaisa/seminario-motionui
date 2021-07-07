@@ -5,18 +5,366 @@
     outline: none;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-@keyframes spin-cw-360deg {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
+
+/* ESTILIZAÇÃO GERAL */
+
+.titulo {
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    text-transform: lowercase;
+    font-weight: 500;
+}
+
+.info-sobre p::first-letter,
+.interesses p::first-letter,
+.hobbies p::first-letter {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.blink-bottom {
+    animation: blinkCursorBottom 800ms linear infinite;
+    opacity: 1;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@keyframes blinkCursorBottom {
+    to {
+        opacity: 0;
     }
 }
 
-.spin-cw {
-    animation-name: spin-cw-360deg;
+
+/* HEADER */
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(0deg, rgba(11, 11, 11, 0.5326505602240896) 0%, rgba(0, 0, 0, 0.28335084033613445) 46%), url("assets/img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+    padding: 1rem;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffffd1;
+    position: relative;
+    transition: .5s;
+    font-family: 'Space Mono', monospace;
+    text-transform: lowercase;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+nav {
+    visibility: hidden;
+}
+
+.img-header {
+    justify-content: center;
+}
+
+.img-header img {
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: rgb(0 0 0 / 26%) 3px 3px 13px;
+}
+
+header h1 {
+    font-family: 'Space Mono', monospace;
+    color: #ffffffd1;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+header p {
+    color: #ffffffd1;
+}
+
+header .info {
+    padding: 0.5rem 0 5rem;
+}
+
+
+/* ANIMAÇÃO SETA */
+
+.seta-animada {
+    color: #ffffffd1;
+    font-size: 20px;
+    animation: is-boucing 1s ease-in-out alternate infinite;
+}
+
+@keyframes is-boucing {
+    to {
+        transform: translateY(20px);
+    }
+}
+
+
+/* ANIMAÇÃO DIGITANDO */
+
+.line {
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typing-animation {
+    animation: blinkCursor 500ms steps(40) infinite normal, typing 3s steps(40) 0.8s normal both;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 150px;
+    }
+}
+
+@keyframes blinkCursor {
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        visibility: visible;
+    }
+    .container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 920px) {
+    .titulo {
+        font-size: 2rem;
+    }
+    .container {
+        width: 75%;
+    }
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+    nav ul li a:hover {
+        font-size: 1.3rem;
+    }
+    .img-header img {
+        width: 250px;
+    }
+    .info {
+        font-size: 1.5rem;
+    }
+    .line {
+        font-size: 1.8rem;
+    }
+    .seta-animada {
+        font-size: 2rem;
+    }
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 215px;
+        }
+    }
+}
+
+
+/* SOBRE */
+#sobre-h2:hover{
+    cursor: pointer;
+}
+
+#sobre-h2{
+    width: 6em;
+    margin: auto;
+}
+
+#sobre-div{
+    display: none;
+}
+
+.sobre {
+    background-color: #f3f4f5;
+    padding: 2rem;
+}
+
+.sobre .titulo {
+    color: #CC9BAF;
+}
+
+.info-sobre {
+    display: grid;
+}
+
+.info-sobre a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.info-sobre a:hover {
+    opacity: 0.8;
+}
+
+.info-sobre a:visited {
+    color: #2D4564;
+}
+
+.info-sobre img {
+    width: 250px;
+    justify-self: center;
+}
+
+@media (min-width: 920px) {
+    .info-sobre {
+        grid-template-columns: 1fr 1fr;
+    }
+    .info-sobre p {
+        align-self: center;
+    }
+    .info-sobre img {
+        width: 350px;
+    }
+}
+
+
+/* INTERESSES */
+
+.interesses {
+    padding: 2rem;
+}
+
+.interesses p {
+    padding: 2rem 0;
+}
+
+.img-interesses {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.img-interesses img {
+    width: 68px;
+    transition: .5s;
+}
+
+.img-interesses img:hover {
+    opacity: 0.6;
+}
+
+@media (min-width: 920px) {
+    .img-interesses {
+        width: 40%;
+    }
+}
+
+
+/* HOBBIES */
+
+.conteudo-hobbies {
+    background-color: #f3f4f5;
+    margin-top: -2%;
+    padding: 2rem 2rem 5rem;
+}
+
+.conteudo-hobbies h2 {
+    color: #5A91B7;
+}
+
+.conteudo-hobbies p {
+    padding: 2rem 0;
+}
+
+.hobbies img {
+    transition: .5s;
+    width: 200px;
+}
+
+.info-hobbies {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+}
+
+.descricao-hobbies {
+    justify-self: center;
+}
+
+.descricao-hobbies h3 {
+    font-family: 'Space Mono', monospace;
+    text-transform: lowercase;
+    font-weight: 500;
+    text-align: center;
+}
+
+.descricao-hobbies img:hover {
+    opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+    .hobbies {
+        margin-top: -5%;
+    }
+    .info-hobbies {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+    }
+    .info-hobbies img {
+        height: 200px;
+        object-fit: contain;
+    }
+    .conteudo-hobbies {
+        padding: 2rem 2rem 8rem;
+    }
+}
+
+footer {
+    background: #2D4564;
+    padding: 3rem 2rem;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Space Mono', monospace;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+}
+
