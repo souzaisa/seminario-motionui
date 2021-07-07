@@ -49,7 +49,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(0deg, rgba(11, 11, 11, 0.5326505602240896) 0%, rgba(0, 0, 0, 0.28335084033613445) 46%), url("assets/img/background.jpg");
+    background-image: linear-gradient(0deg, rgba(11, 11, 11, 0.5326505602240896) 0%, rgba(0, 0, 0, 0.28335084033613445) 46%), url("https://images.unsplash.com/photo-1587836383649-7776f37c5c7a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1334&q=80");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -122,49 +122,18 @@ header .info {
 .seta-animada {
     color: #ffffffd1;
     font-size: 20px;
-    animation: is-boucing 1s ease-in-out alternate infinite;
-}
-
-@keyframes is-boucing {
-    to {
-        transform: translateY(20px);
-    }
-}
-
-
-/* ANIMAÇÃO DIGITANDO */
-
-.line {
-    border-right: 2px solid rgba(255, 255, 255, 0.75);
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.typing-animation {
-    animation: blinkCursor 500ms steps(40) infinite normal, typing 3s steps(40) 0.8s normal both;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 150px;
-    }
-}
-
-@keyframes blinkCursor {
-    to {
-        border-right-color: transparent;
-    }
+    align-self: center;
 }
 
 @media (min-width: 768px) {
     nav {
         visibility: visible;
+    }
+    header {
+        align-items: flex-start;
+    }
+    header .info {
+        padding: 3rem;
     }
     .container {
         width: 80%;
@@ -172,6 +141,9 @@ header .info {
 }
 
 @media (min-width: 920px) {
+    header h1 {
+        font-size: 4rem;
+    }
     .titulo {
         font-size: 2rem;
     }
@@ -208,16 +180,17 @@ header .info {
 
 
 /* SOBRE */
-#sobre-h2:hover{
+
+#sobre-h2:hover {
     cursor: pointer;
 }
 
-#sobre-h2{
+#sobre-h2 {
     width: 6em;
     margin: auto;
 }
 
-#sobre-div{
+#sobre-div {
     display: none;
 }
 
@@ -336,6 +309,7 @@ header .info {
     font-weight: 500;
     text-align: center;
 }
+
 
 /* .descricao-hobbies img:hover {
     opacity: 0.8;

@@ -1,9 +1,6 @@
-// Add the load path "[modules_folder]/motion-ui/src" to your Sass configuration
 @import 'motion-ui';
-
 @include motion-ui-transitions;
 @include motion-ui-animations;
 @import 'motion-ui';
 @include motion-ui-transitions;
 @include motion-ui-animations;
-

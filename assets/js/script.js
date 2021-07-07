@@ -1,38 +1,39 @@
-$(function () {
+$(function() {
     var $yeti = $('#yeti');
     var $transitionList = $('#transitionList');
     var flag = false;
     var animating_html, animating_css;
 
-    $('#transitioner').click(function () {
-        MotionUI.animateIn($yeti, $transitionList.val());
+    MotionUI.animateIn('.info', 'slide-in-left slow');
+
+    $('.seta-animada').hover(function() {
+        MotionUI.animateIn('.seta-animada', 'wiggle slow');
     });
 
-    $('#sobre-h2').click(function () {
-        if (flag == true){
+    $('#sobre-h2').click(function() {
+        if (flag == true) {
             MotionUI.animateOut('#sobre-div', 'fade-out');
             flag = false;
-        }            
-        else{
+        } else {
             MotionUI.animateIn('#sobre-div', 'slide-in-down');
             MotionUI.animateIn('#sobre-img', 'slide-in-left');
             flag = true;
-        }        
+        }
     });
 
-    $('#img_html').hover(function () {
+    $('#img_html').hover(function() {
         MotionUI.animateIn('#img_html', 'scale-in-down');
     });
 
-    $('#img_css').hover(function () {   
+    $('#img_css').hover(function() {
         MotionUI.animateIn('#img_css', 'scale-in-down');
     });
 
-    $('#img_js').hover(function () {
+    $('#img_js').hover(function() {
         MotionUI.animateIn('#img_js', 'spin-in');
     });
 
-    $('#img_react').hover(function () {   
+    $('#img_react').hover(function() {
         MotionUI.animateIn('#img_react', 'spin-in');
     });
 
