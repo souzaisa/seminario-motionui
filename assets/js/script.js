@@ -21,7 +21,7 @@ $(function () {
     });
 
     $('#img_html').hover(function () {
-        MotionUI.animateIn('#img_html', 'scale-in-down');
+        MotionUI.animateIn('#img_html', 'scale-in-up');
     });
 
     $('#img_css').hover(function () {   
@@ -29,7 +29,7 @@ $(function () {
     });
 
     $('#img_js').hover(function () {
-        MotionUI.animateIn('#img_js', 'spin-in');
+        MotionUI.animateIn('#img_js', 'spin-in-ccw');
     });
 
     $('#img_react').hover(function () {   
