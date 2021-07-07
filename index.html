@@ -3,45 +3,100 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="assets/css/style.sass" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/motion-ui.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
-    <title>Motion UI</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7210c6a815.js" crossorigin="anonymous"></script>
+    <title>Isabela Souza</title>
 </head>
 
 <body>
-    <section>
-        <div class="row">
-            <div class="medium-8 medium-push-4 columns">
-                <img id="yeti" src="assets/img/aaaaapng.png">
+    <header id="home" class="cabecalho">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#interesses">Interesses</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+            </ul>
+        </nav>
+        <div class="img-header">
+            <img src="assets/img/minha-foto.png" alt="">
+        </div>
+        <div class="info">
+            <h1 class="line typing-animation">isabela souza</h1>
+            <p>souza.isa@unifei.edu.br</p>
+        </div>
+        <a href="#sobre" class="seta-animada"><i class="fa fa-chevron-down"></i></a>
+    </header>
+
+    <!-- SOBRE -->
+
+    <section class="sobre" id="sobre">
+        <h2 id='sobre-h2' class="titulo">Objetivo<span class="blink-bottom">_</span></h2>
+        <div id='sobre-div'>
+            <div  class="info-sobre container">
+                <p><span class="letra-maiuscula">O</span>lá! O objetivo deste breve site é mostrar o poder e a facilidade de uso do Motion UI para fazer animações simples e divertidas!</a></p>
+                <img id='sobre-img' src="assets/img/Animation-rafiki.png" alt="">
             </div>
-            <div class="medium-4 medium-pull-8 columns">
-                <select id="transitionList">
-                <option value="slide-in-up">slide-in-up</option>
-                <option value="slide-in-right">slide-in-right</option>
-                <option value="slide-in-down">slide-in-down</option>
-                <option value="slide-in-left">slide-in-left</option>
-                <option value="fade-in">fade-in</option>
-                <option value="spin-in">spin-in</option>
-                <option value="spin-in-ccw">spin-in-ccw</option>
-                <option value="scale-in-up">scale-in-up</option>
-                <option value="scale-in-down">scale-in-down</option>
-                <option value="hinge-in-from-top">hinge-in-from-top</option>
-                <option value="hinge-in-from-right">hinge-in-from-right</option>
-                <option value="hinge-in-from-bottom">hinge-in-from-bottom</option>
-                <option value="hinge-in-from-left">hinge-in-from-left</option>
-                <option value="hinge-in-from-middle-x">hinge-in-from-middle-x</option>
-                <option value="hinge-in-from-middle-y">hinge-in-from-middle-y</option>
-              </select>
-
-                <button id="transitioner">Transition!</button>
-
+        </div>
     </section>
+
+    <!-- INTERESSES -->
+
+    <section class="interesses" id="interesses">
+        <h2 class="titulo">Interesses<span class="blink-bottom">_</span></h2>
+        <p class="container"><span class="letra-maiuscula">D</span>esde o ano de 2018 possuo contato com desenvolvimento
+            de sites, tal fato me faz apaixonar pelo universo do front-end.<br>Também atuei como Gerente e,
+            posteriormente, Diretora de Projetos em uma Empresa Júnior
+            e tanto a gerencia, quanto a liderança, se tornou uma área que possuo grande apreço.</p>
+        <div class="img-interesses container">
+            <a href="https://www.w3schools.com/html/" target="_blank"><img src="assets/img/html5.png" alt=""></a>
+            <a href="https://www.w3schools.com/css/" target="_blank"><img src="assets/img/css-3.png" alt=""></a>
+            <a href="https://www.w3schools.com/js/" target="_blank"><img src="assets/img/js.png" alt=""></a>
+            <a href="https://www.w3schools.com/react/" target="_blank"><img src="assets/img/atom.png" alt=""></a>
+        </div>
+    </section>
+
+    <section class="hobbies" id="hobbies">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#f3f4f5" fill-opacity="1"
+                d="M0,160L80,160C160,160,320,160,480,181.3C640,203,800,245,960,240C1120,235,1280,181,1360,154.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+            </path>
+        </svg>
+        <div class="conteudo-hobbies">
+            <h2 class="titulo">hobbies<span class="blink-bottom">_</span></h2>
+            <p class="container"><span class="letra-maiuscula">N</span>esse período de quarentena, pudemos perceber o
+                quanto saber aproveitar a própria companhia e saber nos cuidar é importante. Com isso, consegui criar
+                alguns hobbies que me ajudou.<br>Alguns deles são:</p>
+            <div class="info-hobbies container">
+                <div class="descricao-hobbies">
+                    <a href="https://store.steampowered.com/?l=portuguese" target="_blank"><img
+                            src="assets/img/gaming.png" alt=""></a>
+                    <h3>Jogos online</h3>
+                </div>
+                <div class="descricao-hobbies">
+                    <a href="https://www.youtube.com/channel/UCTqpr2W0r2cC3wefoUrxftQ" target="_blank"><img
+                            src="assets/img/meditation.png" alt=""></a>
+                    <h3>Meditação e Yoga</h3>
+                </div>
+                <div class="descricao-hobbies">
+                    <a href="https://meet.google.com/" target="_blank"><img src="assets/img/group-video.png" alt=""></a>
+                    <h3>Ligação com amigos</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Desenvolvido com <i class="far fa-heart"></i> por:<br>Isabela Souza </p>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
