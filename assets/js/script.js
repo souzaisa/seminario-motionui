@@ -15,8 +15,8 @@ $(function() {
             MotionUI.animateOut('#sobre-div', 'fade-out');
             flag = false;
         } else {
-            MotionUI.animateIn('#sobre-div', 'slide-in-down');
-            MotionUI.animateIn('#sobre-img', 'slide-in-left');
+            MotionUI.animateIn('#sobre-div', 'hinge-in-from-top');
+            MotionUI.animateIn('#sobre-img', 'hinge-in-from-right');
             flag = true;
         }
     });
